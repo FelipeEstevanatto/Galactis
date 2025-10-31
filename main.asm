@@ -1,12 +1,12 @@
 .set macro 		            #To include an external file
-.include "menuInicial.asm"
+.include "menuStart.asm"
 .data
 .text
 main:
 jal colors		
 jal background_def
 
-menu() 		        #To call a function located in another file - associated with the .set macro
+drawMenu() 		        #To call a function located in another file - associated with the .set macro
 
 .set nomacro 		#Marks the end of the external file inclusion
 colors:

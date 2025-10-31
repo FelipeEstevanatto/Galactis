@@ -3,6 +3,8 @@ cappa
 Um jogo simples em MIPS Assembly usando Memory-Mapped I/O para teclado e display bitmap.
 Como temos a unidade 4x4 e o display 512x256, temos uma resolução efetiva de 128x64 pixels.
 
+- Utilizando a extensão Better MIPS Support
+
 # Compilar todos os arquivos
 - Settings > Assemble all files in directory
 
