@@ -39,20 +39,20 @@ except ImportError:
 
 # Default palette mapping: hex RGB (uppercase, no leading 0x, no alpha) -> register
 DEFAULT_PALETTE: Dict[str, str] = {
+    '964B00': '$17',  # Brown
+    '00A8FF': '$18',  # Light Blue
+    '00FF00': '$19',  # Green
     '000000': '$20',  # Black
     '4169E1': '$21',  # Blue (RoyalBlue)
     'FFFF00': '$22',  # Yellow
     'CFBA95': '$23',  # Score color
     'DC143C': '$24',  # Crimson
-    'FF007F': '$25',  # Pink
+    '606060': '$25',  # Light Gray
     'FFA500': '$26',  # Orange
     'FF6600': '$27',  # Dark Orange
     'FF0000': '$28',  # Red Game Over
     '808080': '$29',  # Gray
     'FFFFFF': '$30',  # White
-    '00FF00': '$19',  # Green
-    '00A8FF': '$18',  # Light Blue
-    '964B00': '$17',  # Brown
 }
 
 RGBA_HEX_LEN = 8  # openpyxl returns ARGB as 8 hex digits (AARRGGBB)

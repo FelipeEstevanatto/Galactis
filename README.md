@@ -49,5 +49,15 @@ https://dpetersanderson.github.io/Help/MacrosHelp.html
 
 # Rodar script para fazer backgrounds
 ```bash
-python tools\gen_bitmap_from_excel.py --input .\mymap.xlsx --sheet Plan1 --out generated/menuSprite.asm --macro-name drawMenu
+python tools\gen_bitmap_from_excel.py --input .\sprites.xlsx --sheet Menu --out generated/menuSprite.asm --macro-name drawMenu
 ```
+```bash
+python tools\gen_bitmap_from_excel.py --input .\sprites.xlsx --sheet Map --out generated/mapSprite.asm --macro-name drawMap
+```
+
+
+# INTERFACE
+Nossa tela é de 128x64, nossa "interface" será desenhada nas primeiras 8 linhas (0-7) da tela, ou seja, 128x8 pixels.
+Nossa borda superior, inferior e lateral esquerda da interface será de 2 pixels cada, e a lateral direita terá informações extras totalizando 16 pixels
+Totalizando, teremos 110x60 pixels para o jogo em si, considerando um "bloco" como sendo 5x5, teremos 22 blocos de largura (110/5) e 12 blocos de altura (60/5) para o jogo em si.
+
