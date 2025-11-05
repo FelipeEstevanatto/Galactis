@@ -1,7 +1,5 @@
-# .include "cappamap.asm"
 .data
 .text
-
 
 .macro set0Menu
 set0Menu:
@@ -8198,5 +8196,4 @@ sw $20, 32756($10)
 sw $20, 32760($10)
 sw $20, 32764($10)
 
-# cappamap()
 .end_macro

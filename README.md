@@ -46,3 +46,8 @@ guarda o valor do registrador $0, que é hardwired parar ser 0, então o valor �
 
 # Macros e .eqv (equivalentes/define)
 https://dpetersanderson.github.io/Help/MacrosHelp.html
+
+# Rodar script para fazer backgrounds
+```bash
+python tools\gen_bitmap_from_excel.py --input .\mymap.xlsx --sheet Plan1 --out generated/menuSprite.asm --macro-name drawMenu
+```
