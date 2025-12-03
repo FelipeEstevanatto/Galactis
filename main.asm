@@ -27,7 +27,7 @@ wait_input:
 
 start_game:
 	# 4. Clear screen (paint black)
-	clearScreen()          # Call function to set the screen to black
+	clearScreen()      # Call function to set the screen to black
 	
     drawMap()          # Call function to draw the map sprite
 
@@ -38,23 +38,6 @@ start_game:
 	syscall
 
 # ===== HELPER FUNCTIONS =====
-
-colors:
-	addi $18, $0, 0x00A8FF  # Light Blue
-	addi $19, $0, 0x00FF00  # Green
-	addi $20, $0, 0x000000	# Black
-	addi $21, $0, 0x4169E1	# Blue
-	addi $22, $0, 0xFFFF00	# Yellow
-	addi $23, $0, 0xCFBA95 	# Score color
-	addi $24, $0, 0xDC143C  # Crimson
-	addi $25, $0, 0x606060  # Light Gray
-	addi $26, $0, 0xFFA500  # Orange
-	addi $27, $0, 0xFF6600  # Dark Orange
-	# addi $28, $0, 0xFF0000  # Red Game Over
-	# addi $29, $0, 0x808080  # Gray
-	# addi $30, $0, 0xFFFFFF  # White
-	jr $31
-
 background_def:
 	addi $9, $0, 8192	# Background size
 	add $10, $0, $9		# Initial position
