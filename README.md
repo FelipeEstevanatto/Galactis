@@ -18,7 +18,7 @@ E necessário compilar todos os arquivos
 - Após abrir as tools e configurar o Bitmap Display
 - Focar no MMIO Simulator Keyboard e digitar lá para o input de teclado
 
-set0* - Pinta a tela toda com uma "imagem" como de vitória, gameover, menu, youwin
+set0* - Pinta a tela toda com uma "imagem" como de vitória, gameOverScreen, menu, youwin
 
 Paleta de cores definidas no código no main.asm, desenhadas manualmente pixel a pixel por endereço de memória
 
@@ -49,10 +49,10 @@ https://dpetersanderson.github.io/Help/MacrosHelp.html
 
 # Rodar script para fazer backgrounds
 ```bash
-python tools\gen_bitmap_from_excel.py --input .\sprites.xlsx --sheet Menu --out generated/menuSprite.asm --macro-name drawMenu
+python tools\gen_bitmap_from_excel.py --input .\sprites.xlsx --sheet Menu --out sprites/menuSprite.asm --macro-name drawMenu
 ```
 ```bash
-python tools\gen_bitmap_from_excel.py --input .\sprites.xlsx --sheet Map --out generated/mapSprite.asm --macro-name drawMap
+python tools\gen_bitmap_from_excel.py --input .\sprites.xlsx --sheet Map --out sprites/mapSprite.asm --macro-name drawMap
 ```
 
 

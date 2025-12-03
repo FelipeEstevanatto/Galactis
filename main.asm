@@ -1,7 +1,8 @@
 .set macro 		            #To include an external file
-.include "generated/menuSprite.asm"
-.include "generated/mapSprite.asm"
-.include "set0Menu.asm" 	#Para chamar o arquivo externo
+.include "sprites/menuSprite.asm"
+.include "sprites/mapSprite.asm"
+.include "sprites/clearScreen.asm" 	#Para chamar o arquivo externo
+.include "mainGame.asm"
 .data
 .text
 
@@ -26,11 +27,11 @@ wait_input:
 
 start_game:
 	# 4. Clear screen (paint black)
-	set0Menu()          # Call function to set the screen to black
+	clearScreen()          # Call function to set the screen to black
 	
-	# 5. Start the game (add your game logic here)
-	# TODO: Call your game initialization function here
     drawMap()          # Call function to draw the map sprite
+
+	mainGame()
 
 	# End program with syscall
 	li $v0, 10          # System call code for exit
@@ -39,7 +40,6 @@ start_game:
 # ===== HELPER FUNCTIONS =====
 
 colors:
-	addi $17, $0, 0x964B00  # Brown
 	addi $18, $0, 0x00A8FF  # Light Blue
 	addi $19, $0, 0x00FF00  # Green
 	addi $20, $0, 0x000000	# Black
@@ -50,9 +50,9 @@ colors:
 	addi $25, $0, 0x606060  # Light Gray
 	addi $26, $0, 0xFFA500  # Orange
 	addi $27, $0, 0xFF6600  # Dark Orange
-	addi $28, $0, 0xFF0000  # Red Game Over
-	addi $29, $0, 0x808080  # Gray
-	addi $30, $0, 0xFFFFFF  # White
+	# addi $28, $0, 0xFF0000  # Red Game Over
+	# addi $29, $0, 0x808080  # Gray
+	# addi $30, $0, 0xFFFFFF  # White
 	jr $31
 
 background_def:
