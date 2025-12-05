@@ -9,7 +9,6 @@
 # ===== MAIN PROGRAM =====
 main:
 	# 1. Setup: Initialize colors and background
-	jal colors		
 	jal background_def
 	
 	# 2. Draw the menu screen
